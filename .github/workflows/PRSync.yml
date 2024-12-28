@@ -6,8 +6,10 @@
 name: Create CVE sync PR
 
 on:
-  schedule:
-  - cron: '00 0 * * *'
+  workflow_run:
+    workflows: ["Build"]
+  #schedule:
+  #- cron: '00 0 * * *'
 
 jobs:
   pull-request:
